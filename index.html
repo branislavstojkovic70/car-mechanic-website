@@ -127,31 +127,6 @@
         </div>
     </div>
 
-    <script>
-        (function () {
-            var drawer   = document.getElementById('mobileDrawer');
-            var backdrop = document.getElementById('drawerBackdrop');
-
-            function openDrawer() {
-                drawer.classList.add('is-open');
-                backdrop.classList.add('is-open');
-                document.body.style.overflow = 'hidden';
-            }
-            function closeDrawer() {
-                drawer.classList.remove('is-open');
-                backdrop.classList.remove('is-open');
-                document.body.style.overflow = '';
-            }
-
-            document.getElementById('drawerToggle').addEventListener('click', openDrawer);
-            document.getElementById('drawerCloseBtn').addEventListener('click', closeDrawer);
-            backdrop.addEventListener('click', closeDrawer);
-            document.querySelectorAll('.drawer-link').forEach(function (el) {
-                el.addEventListener('click', closeDrawer);
-            });
-        })();
-    </script>
-
     <!-- ===== HERO SLIDER ===== -->
     <section id="hero">
         <div class="swiper hero-swiper">
@@ -531,6 +506,30 @@
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <script>
+        (function () {
+            var drawer   = document.getElementById('mobileDrawer');
+            var backdrop = document.getElementById('drawerBackdrop');
+
+            function openDrawer() {
+                drawer.classList.add('is-open');
+                backdrop.classList.add('is-open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeDrawer() {
+                drawer.classList.remove('is-open');
+                backdrop.classList.remove('is-open');
+                document.body.style.overflow = '';
+            }
+
+            document.addEventListener('click', function (e) {
+                if (e.target.closest('#drawerToggle'))   { openDrawer();  return; }
+                if (e.target.closest('#drawerCloseBtn')) { closeDrawer(); return; }
+                if (e.target.closest('#drawerBackdrop')) { closeDrawer(); return; }
+                if (e.target.closest('.drawer-link'))    { closeDrawer(); return; }
+            });
+        })();
+    </script>
 
 </body>
 
