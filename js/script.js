@@ -60,27 +60,6 @@
 
     initChocolat();
 
-    // --- Custom mobile drawer ---
-    var drawer   = document.getElementById('mobileDrawer');
-    var backdrop = document.getElementById('drawerBackdrop');
-
-    function openDrawer() {
-      drawer.classList.add('is-open');
-      backdrop.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeDrawer() {
-      drawer.classList.remove('is-open');
-      backdrop.classList.remove('is-open');
-      document.body.style.overflow = '';
-    }
-
-    $('#drawerToggle').on('click', openDrawer);
-    $('#drawerCloseBtn').on('click', closeDrawer);
-    $(backdrop).on('click', closeDrawer);
-    $('.drawer-link').on('click', closeDrawer);
-
   });
 
 })(jQuery);

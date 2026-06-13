@@ -127,6 +127,31 @@
         </div>
     </div>
 
+    <script>
+        (function () {
+            var drawer   = document.getElementById('mobileDrawer');
+            var backdrop = document.getElementById('drawerBackdrop');
+
+            function openDrawer() {
+                drawer.classList.add('is-open');
+                backdrop.classList.add('is-open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeDrawer() {
+                drawer.classList.remove('is-open');
+                backdrop.classList.remove('is-open');
+                document.body.style.overflow = '';
+            }
+
+            document.getElementById('drawerToggle').addEventListener('click', openDrawer);
+            document.getElementById('drawerCloseBtn').addEventListener('click', closeDrawer);
+            backdrop.addEventListener('click', closeDrawer);
+            document.querySelectorAll('.drawer-link').forEach(function (el) {
+                el.addEventListener('click', closeDrawer);
+            });
+        })();
+    </script>
+
     <!-- ===== HERO SLIDER ===== -->
     <section id="hero">
         <div class="swiper hero-swiper">
