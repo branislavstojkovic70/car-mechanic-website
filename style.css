@@ -1,128 +1,68 @@
-/* 
-Theme Name: Turbo
-Theme URL: 
-Author: TemplatesJungle
-Author URL: https://templatesjungle.com/
-Description: Turbo  is a Free Bootstrap Website Template for Car Wash by TemplatesJungle.
-Version: 1.0 
-*/
-
-
 /*--------------------------------------------------------------
-This is main CSS file that contains custom style rules used in this template
+AM Sport – Auto Servis Kragujevac
+style.css
 --------------------------------------------------------------*/
 
-/*------------------------------------*\
-    Table of contents
-\*------------------------------------*/
+/* ============================================================
+   1. RESET & ROOT VARIABLES
+   ============================================================ */
 
-/*
-
-CSS STRUCTURE:
-
-1. VARIABLES
-2. GENERAL TYPOGRAPHY
-
---------------------------------------------------------------*/
-
-/*  General Styles
-/*----------------------------------------------*/
 *,
 *::before,
 *::after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     --heading-font: 'Oswald', sans-serif;
-    --heading-font-weight: 700;
     --heading-color: #1F1F1F;
     --accent-color: #F6452D;
     --background-color: #F6F6F6;
 
-
-
-    /* bootstrap */
     --bs-body-font-family: 'Nunito Sans', sans-serif;
     --bs-body-font-size: 18px;
     --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.75313rem;
+    --bs-body-line-height: 1.75rem;
     --bs-body-color: #7D7D7D;
-    --bs-body-color-rgb: 143, 143, 143;
 
-    --bs-primary: #8C907E;
-    --bs-secondary: #6c757d;
     --bs-black: #1F1F1F;
     --bs-light: #FFFFFF;
     --bs-dark: #101010;
     --bs-gray: #E4E4E4;
     --bs-gray-dark: #ABABAB;
 
-    --bs-primary-rgb: 140, 144, 126;
-    --bs-secondary-rgb: 108, 117, 125;
-    --bs-black-rgb: 17, 17, 17;
-    --bs-light-rgb: 241, 241, 240;
-    --bs-dark-rgb: 33, 37, 41;
-
     --bs-link-color: #111;
-    --bs-link-color-rgb: 17, 17, 17;
-    --bs-link-decoration: underline;
     --bs-link-hover-color: #111;
-    --bs-link-hover-color-rgb: 17, 17, 17;
+    --bs-link-decoration: underline;
 
     --bs-border-width: 2px;
-    --bs-border-style: solid;
     --bs-border-color: #E4E4E4;
-
 }
 
 a {
     text-decoration: none;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
+/* ============================================================
+   2. TYPOGRAPHY
+   ============================================================ */
+
+h1, .h1, h2, .h2, h3, .h3,
+h4, .h4, h5, .h5, h6, .h6 {
     font-family: var(--heading-font);
-    font-weight: var(--heading-font-weight);
+    font-weight: 700;
     color: var(--heading-color);
-    line-height: var(--heading-line-height);
-    letter-spacing: 0.0725rem;
+    letter-spacing: 0.07rem;
     text-transform: uppercase;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3 {
-    font-weight: 600;
-}
-
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-    font-weight: 500;
-}
+h1, .h1, h2, .h2, h3, .h3 { font-weight: 600; }
+h4, .h4, h5, .h5, h6, .h6 { font-weight: 500; }
 
 .header-top {
     color: var(--accent-color);
@@ -130,71 +70,22 @@ h6,
     font-size: 0.9375rem;
     font-weight: 600;
     line-height: normal;
-    letter-spacing: 0.28125rem;
+    letter-spacing: 0.28rem;
 }
 
-.heading-color {
-    color: var(--accent-color);
-}
+.heading-color { color: var(--accent-color); }
 
-.padding-large {
-    padding-top: 26.13rem;
-    padding-bottom: 14.06rem;
-}
+/* ============================================================
+   3. BUTTONS
+   ============================================================ */
 
-.padding-medium {
-    padding-top: 9rem;
-    padding-bottom: 9rem;
-}
-
-.padding-medium-2 {
-    padding-top: 9rem;
-    padding-bottom: 9rem;
-}
-
-@media only screen and (max-width: 768px) {
-    .padding-large {
-        padding-top: 18rem;
-        padding-bottom: 12rem;
-    }
-
-    .padding-medium {
-        padding-top: 5rem;
-        padding-bottom: 0rem;
-    }
-
-    .padding-medium-2 {
-        padding-top: 2rem;
-        padding-bottom: 5rem;
-    }
-}
-
-
-/* bootstrap button style  */
 .btn {
     text-transform: uppercase;
     letter-spacing: 0.075rem;
     --bs-btn-padding-x: 3rem;
     --bs-btn-padding-y: 1.4rem;
     --bs-btn-font-weight: 600;
-    --bs-btn-border-radius: 0px;
-}
-
-.btn-outline-primary {
-    --bs-btn-color: var(--bs-light);
-    --bs-btn-border-color: var(--bs-light);
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: var(--accent-color);
-    --bs-btn-hover-border-color: var(--accent-color);
-    --bs-btn-focus-shadow-rgb: 13, 110, 253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: var(--accent-color);
-    --bs-btn-active-border-color: var(--accent-color);
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #0d6efd;
-    --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: #0d6efd;
-    --bs-gradient: none;
+    --bs-btn-border-radius: 0;
 }
 
 .btn-primary {
@@ -204,25 +95,31 @@ h6,
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #ea422b;
     --bs-btn-hover-border-color: #ea422b;
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #ea422b;
     --bs-btn-active-border-color: #ea422b;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #0d6efd;
-    --bs-btn-disabled-border-color: #0d6efd;
 }
 
-/* button arrow style  */
+.btn-outline-primary {
+    --bs-btn-color: var(--bs-light);
+    --bs-btn-border-color: var(--bs-light);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--accent-color);
+    --bs-btn-hover-border-color: var(--accent-color);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--accent-color);
+    --bs-btn-active-border-color: var(--accent-color);
+}
+
 iconify-icon.arrow-icon {
-    font-weight: 600;
     font-size: 16px;
     margin-bottom: -3px;
 }
 
+/* ============================================================
+   4. NAVBAR & OFFCANVAS
+   ============================================================ */
 
-/* offcanvas style  */
 .offcanvas,
 .offcanvas-lg,
 .offcanvas-md,
@@ -233,7 +130,7 @@ iconify-icon.arrow-icon {
 }
 
 .navbar-toggler {
-    border: var(--bs-border-width) solid var(--bs-light);
+    border: 2px solid var(--bs-light);
 }
 
 .navbar-brand img {
@@ -252,11 +149,7 @@ iconify-icon.hamburger-menu {
     font-size: 30px;
 }
 
-
-
-/*---- navigation section style start ----*/
 .nav-link {
-    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
     font-size: 0.9375rem;
     font-weight: 600;
     letter-spacing: 0.075rem;
@@ -265,366 +158,58 @@ iconify-icon.hamburger-menu {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.show {
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 iconify-icon.social-icon {
     font-size: 1.2rem;
 }
 
-/* dropdown style  */
-
-.dropdown-menu {
-    --bs-dropdown-bg: var(--bs-black);
-    --bs-dropdown-border-radius: 0px;
+/* Social icons vidljivi samo na > 1500px */
+@media (max-width: 1500px) {
+    .social-div { display: none; }
 }
 
-.dropdown-item {
-    color: var(--bs-light);
+/* Scroll-triggered dark background */
+.navbar.fixed-top.bg-black {
+    background-color: var(--bs-dark) !important;
 }
 
-.dropdown-item.active,
-.dropdown-item:active {
-    color: var(--bs-dropdown-link-active-color);
-    text-decoration: none;
-    background-color: var(--bs-gray-dark);
-}
+/* ============================================================
+   5. FULL-SCREEN SECTIONS
+   ============================================================ */
 
-
-@media only screen and (max-width: 1500px) {
-    .social-div {
-        display: none;
-    }
-}
-
-
-/*---- hero section style start ----*/
-
-
-/*---- full-screen sections ----*/
-#usluge,
-#galerija,
-#mapa,
-#kontakt {
+.section-fullscreen {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
 @supports (min-height: 100dvh) {
-    #usluge,
-    #galerija,
-    #mapa,
-    #kontakt {
+    .section-fullscreen {
         min-height: 100dvh;
     }
 }
 
-
-/*---- project section style start ----*/
-.swiper-slide {
-    width: auto !important;
-}
-
-iconify-icon.icon-arrow-left,
-iconify-icon.icon-arrow-right {
-    color: var(--bs-light);
-    font-size: 70px;
-}
-
-iconify-icon.icon-arrow-left:active,
-iconify-icon.icon-arrow-right:active {
-    color: var(--bs-light);
-}
-
-@media only screen and (max-width: 576px) {
-    .swiper-arrow {
-        left: 0;
-    }
-
-    iconify-icon.icon-arrow-left,
-    iconify-icon.icon-arrow-right {
-
-        font-size: 50px;
-    }
-
-}
-
-/*---- price section style start ----*/
-
-/* tab style  */
-.nav-tabs {
-    --bs-nav-tabs-border-color: transparent;
-}
-
-.nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-link:hover {
-    color: var(--bs-light);
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-.nav-tabs .nav-link {
-    text-transform: uppercase;
-    border: 1px solid #E4E4E4;
-    border-radius: 0px;
-    transition: all 0.2s ease-in;
-
-}
-
-
-.plan-post {
-    border: 1px solid var(--bs-border-color);
-}
-
-span.price-tick {
-    color: var(--accent-color);
-}
-
-.price-option {
-    height: 320px;
-}
-
-
-/*---- blog section style start ----*/
-.blog-content {
-    border-bottom: 1px solid var(--bs-border-color);
-    transition: all 0.2s ease-in;
-}
-
-.blog-topic {
-    color: var(--bs-gray-dark);
-    font-size: 0.9375rem;
-    letter-spacing: 0.28125rem;
-}
-
-.blog-title {
-    transition: all 0.3s ease-in;
-}
-
-
-.blog-content:hover {
-    background: var(--background-color);
-}
-
-.blog-content:hover .blog-title {
-    color: var(--accent-color);
-}
-
-/*---- video section style start ----*/
-.video .video-player {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-iconify-icon.video-icon {
-    font-size: 66px;
-    color: var(--bs-light);
-    border-radius: 6.25rem;
-    background: rgba(255, 255, 255, 0.35);
-}
-
-
-/*---- footer section style start ----*/
-section#footer {
-    background: var(--background-color);
-}
-
-.navbar-nav .footer-list .nav-link.active,
-.navbar-nav .footer-list .nav-link:hover,
-.navbar-nav .footer-list .nav-link.show {
-    background: transparent;
-    color: var(--accent-color);
-}
-
-iconify-icon.social-icon-footer {
-    font-size: 20px;
-    color: #D0D0D0;
-}
-
-iconify-icon.social-icon-footer.active,
-iconify-icon.social-icon-footer:hover,
-iconify-icon.social-icon-footer.show {
-    color: var(--accent-color);
-}
-
-
-/*--------------------------------------------------------------
-about section style start
---------------------------------------------------------------*/
-
-.breadcrumb {
-    --bs-breadcrumb-divider-color: var(--bs-light);
-}
-
-
-/*--------------------------------------------------------------
-blog section style start
---------------------------------------------------------------*/
-
-.blog-title:hover {
-    color: var(--accent-color);
-}
-
-.pagination {
-    --bs-pagination-active-bg: var(--bs-black);
-    --bs-pagination-active-border-color: var(--bs-gray-dark);
-}
-
-
-/*--------------------------------------------------------------
-booking section style start
---------------------------------------------------------------*/
-
-.form-control {
-    padding: 0.9rem 0.9rem;
-    font-size: 1.2rem;
-    border-radius: 0px;
-}
-
-.form-control:focus {
-    color: var(--bs-body-color);
-    background-color: var(--bs-body-bg);
-    border-color: var(--bs-gray-dark);
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem var(--bs-gray);
-}
-
-/*--------------------------------------------------------------
-faqs section style start
---------------------------------------------------------------*/
-
-.accordion-button:not(.collapsed) {
-    color: var(--bs-accordion-active-color);
-    background-color: var(--bs-gray);
-}
-
-.accordion-button:focus {
-    z-index: 3;
-    border-color: var(--bs-black);
-    outline: 0;
-    box-shadow: var(--bs-black);
-}
-
-
-/*--------------------------------------------------------------
-services section style start
---------------------------------------------------------------*/
-
-.services-content {
-    border-radius: 20px;
-}
-
-iconify-icon.service-icon {
-    font-size: 80px;
-    color: var(--accent-color);
-}
-
-a.icon-link {
-    font-size: 1rem;
-    text-transform: uppercase;
-    display: inline-table;
-}
-
-a.icon-link:after {
-    content: "";
-    display: block;
-    border-bottom: 1px solid var(--accent-color);
-    width: 20%;
-    transition: width 0.2s ease-out;
-}
-
-a.icon-link:hover:after {
-    width: 80%;
-}
-
-
-
-
-/*--------------------------------------------------------------
-reviews section style start
---------------------------------------------------------------*/
-
-
-.reviews-components {
-    border: 2px solid #FAFAFA;
-    box-shadow: 0px 12px 90px rgba(12, 12, 12, 0.06);
-    border-radius: 9px;
-}
-
-iconify-icon.quote {
-    font-size: 60px;
-    color: var(--accent-color);
-}
-
-.rate {
-    color: var(--accent-color);
-}
-
-
-
-/*--------------------------------------------------------------
-gallary/project section style start
---------------------------------------------------------------*/
-
-button.filter-button {
-    letter-spacing: 0.075rem;
-    border: 1px solid var(--bs-border-color);
-    background: transparent;
-    color: var(--bs-black);
-    text-transform: uppercase;
-    font-size: 1rem;
-    transition: all 0.3s ease-in;
-}
-
-button.filter-button.active {
-    color: var(--bs-light);
-    background: var(--accent-color);
-}
-
-button.filter-button:hover {
-    color: var(--bs-light);
-    background: var(--accent-color);
-}
-
-.item .description {
-    width: 100%;
-    position: absolute;
-    z-index: 5;
-    opacity: 0;
-    transition: all 0.5s ease-in;
-}
-
-.item:hover .description {
-    opacity: 1;
-}
-
-
-/* chocolat style  */
-.chocolat-wrapper.chocolat-visible {
-    z-index: 9999999999;
-    transition: opacity 0.4s, visibility 0s;
-    opacity: 1;
-    visibility: visible;
-}
-
-
-/*--------------------------------------------------------------
-AM Sport – Hero Slider
---------------------------------------------------------------*/
+/* ============================================================
+   6. HERO SLIDER
+   ============================================================ */
 
 .hero-swiper {
     width: 100%;
     height: 100vh;
     min-height: 600px;
+}
+
+@supports (height: 100dvh) {
+    .hero-swiper { height: 100dvh; }
+}
+
+/* Override global swiper-slide width for hero */
+.hero-swiper .swiper-slide {
+    width: 100% !important;
 }
 
 .hero-slide {
@@ -648,6 +233,13 @@ AM Sport – Hero Slider
     z-index: 2;
 }
 
+.hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
 .hero-pagination.swiper-pagination {
     bottom: 30px;
 }
@@ -665,20 +257,14 @@ AM Sport – Hero Slider
     border-radius: 6px;
 }
 
-/* fix: hero swiper slides should be full width */
-.hero-swiper .swiper-slide {
-    width: 100% !important;
-}
-
-
-/*--------------------------------------------------------------
-AM Sport – Service Cards
---------------------------------------------------------------*/
+/* ============================================================
+   7. SERVICE CARDS
+   ============================================================ */
 
 .service-card {
     border: 1px solid var(--bs-border-color);
-    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     background: #fff;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
@@ -691,16 +277,65 @@ AM Sport – Service Cards
     color: var(--heading-color);
 }
 
-.service-card iconify-icon.service-icon {
+iconify-icon.service-icon {
     display: block;
     font-size: 60px;
     color: var(--accent-color);
 }
 
+/* ============================================================
+   8. GALLERY / PROJECT SWIPER
+   ============================================================ */
 
-/*--------------------------------------------------------------
-AM Sport – Mapa & Kontakt info box
---------------------------------------------------------------*/
+/* Global swiper slide — auto width for project swiper */
+.swiper-slide {
+    width: auto !important;
+}
+
+iconify-icon.icon-arrow-left,
+iconify-icon.icon-arrow-right {
+    color: var(--bs-light);
+    font-size: 70px;
+    cursor: pointer;
+}
+
+.galerija-bg {
+    background-image: url(images/project-img.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item .description {
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.item:hover .description {
+    opacity: 1;
+}
+
+.chocolat-wrapper.chocolat-visible {
+    z-index: 9999999999;
+    transition: opacity 0.4s, visibility 0s;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 576px) {
+    .swiper-arrow { left: 0; }
+
+    iconify-icon.icon-arrow-left,
+    iconify-icon.icon-arrow-right {
+        font-size: 50px;
+    }
+}
+
+/* ============================================================
+   9. MAPA & KONTAKT INFO BOX
+   ============================================================ */
 
 .contact-info-box {
     border: 1px solid var(--bs-border-color);
@@ -723,9 +358,7 @@ AM Sport – Mapa & Kontakt info box
     transition: color 0.2s;
 }
 
-.phone-link:hover {
-    color: #ea422b;
-}
+.phone-link:hover { color: #ea422b; }
 
 .social-btn {
     display: inline-flex;
@@ -747,14 +380,11 @@ AM Sport – Mapa & Kontakt info box
     color: #fff;
 }
 
-.social-btn iconify-icon {
-    font-size: 1.2rem;
-}
+.social-btn iconify-icon { font-size: 1.2rem; }
 
-
-/*--------------------------------------------------------------
-AM Sport – Kontakt traka (tamna sekcija)
---------------------------------------------------------------*/
+/* ============================================================
+   10. KONTAKT CTA + FOOTER
+   ============================================================ */
 
 .kontakt-section {
     background-color: var(--bs-dark);
@@ -765,12 +395,17 @@ AM Sport – Kontakt traka (tamna sekcija)
     padding-right: 2rem;
 }
 
+.kontakt-col-mid {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 @media (min-width: 768px) {
-    .border-md-end {
-        border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
-    }
-    .border-md-bottom-0 {
-        border-bottom: none !important;
+    .kontakt-col-mid {
+        border-top: none;
+        border-bottom: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
     }
     .kontakt-col {
         padding-left: 3rem;
@@ -788,9 +423,7 @@ AM Sport – Kontakt traka (tamna sekcija)
     transition: color 0.2s;
 }
 
-.phone-link-large:hover {
-    color: #ea422b;
-}
+.phone-link-large:hover { color: #ea422b; }
 
 .social-btn-round {
     display: inline-flex;
@@ -812,11 +445,6 @@ AM Sport – Kontakt traka (tamna sekcija)
     color: #fff;
 }
 
-
-/*--------------------------------------------------------------
-AM Sport – Footer
---------------------------------------------------------------*/
-
 .footer-bottom {
     background: #0a0a0a;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -834,14 +462,11 @@ AM Sport – Footer
     transition: color 0.2s;
 }
 
-.footer-social:hover {
-    color: var(--accent-color) !important;
-}
+.footer-social:hover { color: var(--accent-color) !important; }
 
-
-/*--------------------------------------------------------------
-AM Sport – Sticky mobile bottom bar
---------------------------------------------------------------*/
+/* ============================================================
+   11. STICKY MOBILE BAR
+   ============================================================ */
 
 .mobile-bar {
     position: fixed;
@@ -873,14 +498,9 @@ AM Sport – Sticky mobile bottom bar
     transition: background 0.2s;
 }
 
-.mobile-bar-call:hover {
-    background: #ea422b;
-    color: #fff;
-}
+.mobile-bar-call:hover { background: #ea422b; color: #fff; }
 
-.mobile-bar-call iconify-icon {
-    font-size: 1.4rem;
-}
+.mobile-bar-call iconify-icon { font-size: 1.4rem; }
 
 .mobile-bar-social {
     flex: 1;
@@ -899,44 +519,17 @@ AM Sport – Sticky mobile bottom bar
     transition: background 0.2s;
 }
 
-.mobile-bar-social iconify-icon {
-    font-size: 1.55rem;
-}
+.mobile-bar-social iconify-icon { font-size: 1.55rem; }
 
-.mobile-bar-fb:hover {
-    background: #1877f2;
-    color: #fff;
-}
-
-.mobile-bar-ig:hover {
+.mobile-bar-fb:hover  { background: #1877f2; color: #fff; }
+.mobile-bar-ig:hover  {
     background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     color: #fff;
 }
 
-/* Body padding so content isn't hidden behind bar */
-@media (max-width: 991.98px) {
-    body {
-        padding-bottom: 62px;
-    }
-
-    /* Suzi navbar na mobilnom */
-    .navbar.fixed-top {
-        padding-top: 0.4rem !important;
-        padding-bottom: 0.4rem !important;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-
-    .navbar-brand img {
-        max-height: 48px;
-        width: auto;
-    }
-}
-
-
-/*--------------------------------------------------------------
-AM Sport – Offcanvas social section
---------------------------------------------------------------*/
+/* ============================================================
+   12. OFFCANVAS SOCIAL SECTION
+   ============================================================ */
 
 .offcanvas-social-section {
     margin-top: 2rem;
@@ -956,7 +549,9 @@ AM Sport – Offcanvas social section
 .offcanvas-social-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+    flex: 1;
     color: #fff;
     text-decoration: none;
     padding: 12px 20px;
@@ -966,38 +561,34 @@ AM Sport – Offcanvas social section
     letter-spacing: 0.04rem;
     text-transform: uppercase;
     transition: all 0.2s;
-    flex: 1;
-    justify-content: center;
 }
 
-.offcanvas-social-btn iconify-icon {
-    font-size: 1.4rem;
-}
+.offcanvas-social-btn iconify-icon { font-size: 1.4rem; }
 
-.offcanvas-social-btn:hover {
-    color: #fff;
-    border-color: transparent;
-}
-
-.offcanvas-social-btn:first-child:hover {
-    background: #1877f2;
-}
-
+.offcanvas-social-btn:hover { color: #fff; border-color: transparent; }
+.offcanvas-social-btn:not(.offcanvas-social-insta):hover { background: #1877f2; }
 .offcanvas-social-insta:hover {
     background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
 
+/* ============================================================
+   13. MOBILE RESPONSIVE
+   ============================================================ */
 
-/*--------------------------------------------------------------
-AM Sport – Mobile responsive improvements
---------------------------------------------------------------*/
+@media (max-width: 991.98px) {
+    body { padding-bottom: 62px; }
 
-/* Hero – manji tekst i složena dugmad */
-.hero-btns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
+    .navbar.fixed-top {
+        padding-top: 0.4rem !important;
+        padding-bottom: 0.4rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .navbar-brand img {
+        max-height: 48px;
+        width: auto;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -1021,47 +612,20 @@ AM Sport – Mobile responsive improvements
         max-width: 280px;
     }
 
-    /* Usluge – icon manji na telefonu */
-    .service-card iconify-icon.service-icon {
-        font-size: 44px;
-    }
+    iconify-icon.service-icon { font-size: 44px; }
 
-    .service-card {
-        padding: 1rem !important;
-    }
+    .service-card { padding: 1rem !important; }
+    .service-card h4 { font-size: 1rem; }
+    .service-card p  { font-size: 0.85rem; line-height: 1.5; }
 
-    .service-card h4 {
-        font-size: 1rem;
-    }
+    #mapa iframe { min-height: 280px !important; }
 
-    .service-card p {
-        font-size: 0.85rem;
-        line-height: 1.5;
-    }
+    .phone-link-large { font-size: 1.7rem; }
 
-    /* Mapa – skrati iframe visinu na mobilnom */
-    #mapa iframe {
-        min-height: 280px !important;
-    }
-
-    /* Kontakt traka */
-    .phone-link-large {
-        font-size: 1.7rem;
-    }
-
-    /* Contact info box */
-    .contact-info-box {
-        padding: 1.5rem !important;
-    }
+    .contact-info-box { padding: 1.5rem !important; }
 }
 
 @media (max-width: 575.98px) {
-    .hero-content .display-1 {
-        font-size: 2rem;
-    }
-
-    /* Service cards – smanjiti padding na xs */
-    .service-card {
-        padding: 0.75rem !important;
-    }
+    .hero-content .display-1 { font-size: 2rem; }
+    .service-card { padding: 0.75rem !important; }
 }
