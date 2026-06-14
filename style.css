@@ -126,9 +126,9 @@ iconify-icon.arrow-icon {
 }
 
 .navbar-brand img {
-    max-height: 100px;
+    max-height: 65px;
     width: auto;
-    object-fit:contain;
+    object-fit:cover;
 }
 
 .navbar.fixed-top {
